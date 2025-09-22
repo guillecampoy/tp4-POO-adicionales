@@ -42,7 +42,13 @@ public class Main {
         System.out.println("1. Crear libros");
         System.out.println("2. Actualizar libros");
         System.out.println("3. Cambio de editorial");
-        System.out.println("0. Salir");
+        UtilsColor.imprimirBloque(ContextColor.DEFAULT, "--------------------------------------------");
+        UtilsColor.imprimirBloque(ContextColor.INFO, "Sistema de Alumnos con Nota de Probación");
+        System.out.println("4. Creación de Alumnos");
+        System.out.println("5. Actualizar promedios");
+        System.out.println("6. Impresión de resultados discriminando aprobados");
+        System.out.println("7. Cambio nota aprobación");
+        System.out.println("\n0. Salir");
         System.out.print("Seleccione una opción: ");
     }
 
