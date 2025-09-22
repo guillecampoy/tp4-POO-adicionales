@@ -47,11 +47,11 @@ public class Alumno {
     @Override
     public String toString() {
         Locale ar = Locale.of("es", "AR");
-        NumberFormat nf = NumberFormat.getCurrencyInstance(ar);
+        NumberFormat nf = NumberFormat.getNumberInstance(ar);
         nf.setMinimumFractionDigits(2);
         nf.setMaximumFractionDigits(2);
         nf.setGroupingUsed(true);
-        return "Alumno{nombre='" + nombre + "', promedio=" + nf.format(promedio) + "aprobó: "+aprobo()+'}';
+        return "Alumno{nombre=" + nombre + ", promedio=" + nf.format(promedio) + ", aprobó="+aprobo()+'}';
     }
 
 }

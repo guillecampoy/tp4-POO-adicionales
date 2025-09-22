@@ -1,6 +1,10 @@
 package app;
 
 import core.*;
+import features.alumno.ActualizarPromedios;
+import features.alumno.CambioNotaAprobacion;
+import features.alumno.CrearAlumnos;
+import features.alumno.ImpresionResultados;
 import features.libro.ActualizarLibros;
 import features.libro.CambioEditorial;
 import features.libro.CrearLibros;
@@ -65,6 +69,10 @@ public class Main {
             case 1  -> new CrearLibros();
             case 2  -> new ActualizarLibros();
             case 3  -> new CambioEditorial();
+            case 4  -> new CrearAlumnos();
+            case 5  -> new ActualizarPromedios();
+            case 6  -> new ImpresionResultados();
+            case 7  -> new CambioNotaAprobacion();
             default -> null;
         };
     }
