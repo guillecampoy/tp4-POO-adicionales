@@ -47,7 +47,7 @@ public class Main {
         System.out.println("2. Actualizar libros");
         System.out.println("3. Cambio de editorial");
         UtilsColor.imprimirBloque(ContextColor.DEFAULT, "--------------------------------------------");
-        UtilsColor.imprimirBloque(ContextColor.INFO, "Sistema de Alumnos con Nota de Probación");
+        UtilsColor.imprimirBloque(ContextColor.INFO, "Sistema de Alumnos con Nota de Aprobación");
         System.out.println("4. Creación de Alumnos");
         System.out.println("5. Actualizar promedios");
         System.out.println("6. Impresión de resultados discriminando aprobados");

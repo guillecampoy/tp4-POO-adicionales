@@ -44,6 +44,15 @@ public class Alumno {
         NOTA_APROBACION = nuevaNotaAprobacion;
     }
 
+    public String getPromedioFormated() {
+        Locale ar = Locale.of("es", "AR");
+        NumberFormat nf = NumberFormat.getNumberInstance(ar);
+        nf.setMinimumFractionDigits(2);
+        nf.setMaximumFractionDigits(2);
+        nf.setGroupingUsed(true);
+        return nf.format(promedio);
+    }
+
     @Override
     public String toString() {
         Locale ar = Locale.of("es", "AR");
