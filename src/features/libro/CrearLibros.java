@@ -5,8 +5,6 @@ import core.Libro;
 import utils.ContextColor;
 import utils.UtilsColor;
 
-import java.awt.*;
-
 public class CrearLibros implements Ejecutable {
     @Override
     public void execute() {
@@ -29,12 +27,9 @@ public class CrearLibros implements Ejecutable {
         Libro otroCompleto = new Libro(nombreOtroLibroCompleto, autorOtroLibroCompleto, editorialOtroLibroCompleto);
 
         UtilsColor.imprimirBloque(ContextColor.INFO, "Libros creados...");
-        UtilsColor.imprimirBloque(ContextColor.DEFAULT, "\nLibro editorial independiente"+libroIndependiente);
-        UtilsColor.imprimirBloque(ContextColor.DEFAULT, "Segundo libro editorial independiente"+segundoLibroIndependiente);
-        UtilsColor.imprimirBloque(ContextColor.DEFAULT, "Libro + editorial"+completo);
-        UtilsColor.imprimirBloque(ContextColor.DEFAULT, "Segundo libro + editorial"+otroCompleto);
-
-
-
+        UtilsColor.imprimirBloque(ContextColor.DEFAULT, "\nLibro título + autor "+libroIndependiente);
+        UtilsColor.imprimirBloque(ContextColor.DEFAULT, "Segundo título + autor "+segundoLibroIndependiente);
+        UtilsColor.imprimirBloque(ContextColor.DEFAULT, "Titulo + autor + editorial "+completo);
+        UtilsColor.imprimirBloque(ContextColor.DEFAULT, "Segundo título + autor + editorial "+otroCompleto);
     }
 }
