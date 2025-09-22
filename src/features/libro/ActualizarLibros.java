@@ -11,7 +11,7 @@ public class ActualizarLibros implements Ejecutable {
         // Creación de libros de prueba
         String tituloLibro = "Cuentos de amor, de locura y de muerte";
         String autorLibro = "Horacio Quiroga";
-        String nuevoTituloPrefijo = "Edición ilustrada 2025 ";
+        String nuevoTituloPrefijo = "Edición ilustrada 2025";
         String tituloLibroB = "El principito";
         String autorLibroB = "Saint-Exupéry";
         String nuevoTituloB = "Le Petit Prince (El Principito)";

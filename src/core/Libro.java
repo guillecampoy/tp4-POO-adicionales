@@ -51,7 +51,8 @@ public class Libro {
     }
 
     public void actualizarConPrefijo(String prefijo) {
-        this.titulo = prefijo+this.titulo;
+        //No se valida internamente, se asume que se envía una frase o palabra completa sin espacio
+        this.titulo = prefijo+" "+this.titulo;
     }
     public static void cambiarEditorial(String nueva) {
         Libro.editorial = nueva;
