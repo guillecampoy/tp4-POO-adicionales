@@ -5,6 +5,10 @@ import features.alumno.ActualizarPromedios;
 import features.alumno.CambioNotaAprobacion;
 import features.alumno.CrearAlumnos;
 import features.alumno.ListaAlumnos;
+import features.cuenta.ConsultaSaldos;
+import features.cuenta.CreacionCuentas;
+import features.cuenta.CuentasGeneradas;
+import features.cuenta.DepositoAndExtraccion;
 import features.libro.ActualizarLibros;
 import features.libro.CambioEditorial;
 import features.libro.CrearLibros;
@@ -60,6 +64,12 @@ public class Main {
         System.out.println("8. Creación de Productos");
         System.out.println("9. Aplicación descuentos");
         System.out.println("10. Cambio de IVA global y listar precios finales");
+        UtilsColor.imprimirBloque(ContextColor.DEFAULT, "--------------------------------------------");
+        UtilsColor.imprimirBloque(ContextColor.INFO, "Banca simple - cuentas");
+        System.out.println("11. Creación de cuentas");
+        System.out.println("12. Consulta de saldos");
+        System.out.println("13. Pruebas de depósito y extracción");
+        System.out.println("14. Consulta cuentas generadas");
         System.out.println("\n0. Salir");
         System.out.print("Seleccione una opción: ");
     }
@@ -84,6 +94,10 @@ public class Main {
             case 8  ->  new CreacionProductos();
             case 9  ->  new AplicacionDescuentos();
             case 10  -> new CambioDeIVA();
+            case 11  -> new CreacionCuentas();
+            case 12  -> new ConsultaSaldos();
+            case 13  -> new DepositoAndExtraccion();
+            case 14  -> new CuentasGeneradas();
             default -> null;
         };
     }
