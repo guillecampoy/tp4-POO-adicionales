@@ -26,24 +26,21 @@ public class Producto {
     }
 
     public void aplicarDescuento(double porcentajeDescuento) {
-        this.precioBase = this.precioBase * (1.0 - porcentajeDescuento);
-        this.precioBase = UtilsMoneda.roundArs(this.precioBase);
+        this.precioBase -= this.precioBase * porcentajeDescuento;
     }
 
     public void aplicarDescuento(double porcentajeDescuento, double precioMinimo) {
-        double precioConDescuento = this.precioBase * (1.0 - porcentajeDescuento);
+        double precioConDescuento = this.precioBase - (this.precioBase * porcentajeDescuento);
         if (precioConDescuento >= precioMinimo) {
-            this.precioBase = UtilsMoneda.roundArs(precioConDescuento);
+            this.precioBase = precioConDescuento;
         } else {
-            UtilsColor.imprimirBloque(
-                    ContextColor.WARNING,
-                    "No se aplica descuento: el precio con descuento quedaría por debajo del mínimo"
-            );
+            UtilsColor.imprimirBloque(ContextColor.WARNING,
+                    "No se aplica descuento, precio con descuento inferior a mínimo");
         }
     }
 
     public double calcularPrecioFinal() {
-        return this.precioBase += this.precioBase*IVA;
+        return this.precioBase * (1 + IVA);
     }
 
     // método soporte para formateo de moneda
