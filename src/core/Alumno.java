@@ -1,7 +1,6 @@
 package core;
 
 import java.text.NumberFormat;
-import java.util.ArrayList;
 import java.util.Locale;
 
 public class Alumno {
@@ -63,4 +62,14 @@ public class Alumno {
         return "Alumno{nombre=" + nombre + ", promedio=" + nf.format(promedio) + ", aprobó="+aprobo()+'}';
     }
 
+    public static void actualizarNotaMinima(double notaMinima) {
+        Alumno.NOTA_APROBACION = notaMinima;
+    }
+    public static double getNotaMinima() {
+        return NOTA_APROBACION;
+    }
+
+    public void setPromedio(double promedio) {
+        this.promedio = promedio;
+    }
 }

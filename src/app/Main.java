@@ -4,7 +4,7 @@ import core.*;
 import features.alumno.ActualizarPromedios;
 import features.alumno.CambioNotaAprobacion;
 import features.alumno.CrearAlumnos;
-import features.alumno.ImpresionResultados;
+import features.alumno.ListaAlumnos;
 import features.libro.ActualizarLibros;
 import features.libro.CambioEditorial;
 import features.libro.CrearLibros;
@@ -71,7 +71,7 @@ public class Main {
             case 3  -> new CambioEditorial();
             case 4  -> new CrearAlumnos();
             case 5  -> new ActualizarPromedios();
-            case 6  -> new ImpresionResultados();
+            case 6  -> new ListaAlumnos();
             case 7  -> new CambioNotaAprobacion();
             default -> null;
         };
