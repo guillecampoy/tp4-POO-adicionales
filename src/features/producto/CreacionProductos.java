@@ -43,7 +43,7 @@ public class CreacionProductos implements Ejecutable {
     }
 
     public void listarProductos (List<Producto> listadoProductos) {
-        UtilsColor.imprimirBloque(ContextColor.SUCCESS, "Listado de productos\n");
+        UtilsColor.imprimirBloque(ContextColor.SUCCESS, "Listado de productos creados: \n");
         listadoProductos.forEach(producto -> {
             UtilsColor.imprimirBloque(ContextColor.DEFAULT, producto.toString());
         });
