@@ -8,6 +8,9 @@ import features.alumno.ListaAlumnos;
 import features.libro.ActualizarLibros;
 import features.libro.CambioEditorial;
 import features.libro.CrearLibros;
+import features.producto.AplicacionDescuentos;
+import features.producto.CambioDeIVA;
+import features.producto.CreacionProductos;
 import utils.ContextColor;
 import utils.UtilsColor;
 
@@ -52,6 +55,11 @@ public class Main {
         System.out.println("5. Actualizar promedios");
         System.out.println("6. Impresión de resultados discriminando aprobados");
         System.out.println("7. Cambio nota aprobación");
+        UtilsColor.imprimirBloque(ContextColor.DEFAULT, "--------------------------------------------");
+        UtilsColor.imprimirBloque(ContextColor.INFO, "Inventario de productos con IVA");
+        System.out.println("8. Creación de Productos");
+        System.out.println("9. Aplicación descuentos");
+        System.out.println("10. Cambio de IVA global y listar precios finales");
         System.out.println("\n0. Salir");
         System.out.print("Seleccione una opción: ");
     }
@@ -66,13 +74,16 @@ public class Main {
 
     private static Ejecutable obtenerEjercicio(int opcion) {
         return switch (opcion) {
-            case 1  -> new CrearLibros();
-            case 2  -> new ActualizarLibros();
-            case 3  -> new CambioEditorial();
-            case 4  -> new CrearAlumnos();
-            case 5  -> new ActualizarPromedios();
-            case 6  -> new ListaAlumnos();
-            case 7  -> new CambioNotaAprobacion();
+            case 1  ->  new CrearLibros();
+            case 2  ->  new ActualizarLibros();
+            case 3  ->  new CambioEditorial();
+            case 4  ->  new CrearAlumnos();
+            case 5  ->  new ActualizarPromedios();
+            case 6  ->  new ListaAlumnos();
+            case 7  ->  new CambioNotaAprobacion();
+            case 8  ->  new CreacionProductos();
+            case 9  ->  new AplicacionDescuentos();
+            case 10  -> new CambioDeIVA();
             default -> null;
         };
     }
