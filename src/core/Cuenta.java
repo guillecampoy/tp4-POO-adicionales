@@ -11,13 +11,13 @@ public class Cuenta {
     static int ultimoNumero = 100; // Base para auto incrementar la numeración
     static int totalCuentas = 0; // Contador global de cuentas
 
-    Cuenta(String titular) {
+    public Cuenta(String titular) {
         this.titular = titular;
         this.saldo = 0;
         this.numero = ++ultimoNumero;
         totalCuentas++;
     }
-    Cuenta(String titular, double saldo) {
+    public Cuenta(String titular, double saldo) {
         this.titular = titular;
         this.saldo = saldo;
         this.numero = ++ultimoNumero;
