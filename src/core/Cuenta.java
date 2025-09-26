@@ -55,7 +55,11 @@ public class Cuenta {
 
     // método soporte para formateo de moneda
     public String getSaldoFormated() {
-        return UtilsMoneda.formatARS(saldo);
+        return UtilsMoneda.formatCurrency(saldo);
+    }
+
+    public String getSaldoFormated(double cotizacionDolar) {
+        return UtilsMoneda.formatCurrency(consultarSaldo(cotizacionDolar));
     }
 
     @Override

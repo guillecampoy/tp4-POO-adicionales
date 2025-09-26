@@ -30,7 +30,7 @@ public final class UtilsMoneda {
     }
 
     /** Formatea en ARS con símbolo y separadores locales. */
-    public static String formatARS(double amount) {
+    public static String formatCurrency(double amount) {
         // Aseguramos 2 decimales antes de formatear
         double rounded = roundArs(amount);
         return ARS_FORMAT.get().format(rounded);

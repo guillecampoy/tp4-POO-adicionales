@@ -45,11 +45,11 @@ public class Producto {
 
     // método soporte para formateo de moneda
     public String getPrecioBaseFormated() {
-        return UtilsMoneda.formatARS(precioBase);
+        return UtilsMoneda.formatCurrency(precioBase);
     }
 
     public String getPrecioFinalFormated() {
-        return UtilsMoneda.formatARS(calcularPrecioFinal());
+        return UtilsMoneda.formatCurrency(calcularPrecioFinal());
     }
 
     public String getIVADecorado() {
