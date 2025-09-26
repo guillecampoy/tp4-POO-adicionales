@@ -36,7 +36,7 @@ public class Cuenta {
             UtilsColor.imprimirBloque(ContextColor.WARNING, "saldo negativo, no se aplica depósito");
         } else {
             saldo += valor;
-            UtilsColor.imprimirBloque(ContextColor.SUCCESS, "Operación exitosa, saldo actual: "+saldo);
+            UtilsColor.imprimirBloque(ContextColor.SUCCESS, "Depósito exitoso, saldo actual: "+saldo);
         }
     }
 
@@ -45,7 +45,7 @@ public class Cuenta {
             UtilsColor.imprimirBloque(ContextColor.WARNING, "No se cuentan con fondos suficientes para la operación");
         } else {
             saldo -= valor;
-            UtilsColor.imprimirBloque(ContextColor.ERROR, "Operación exitosa, saldo actual: "+saldo);
+            UtilsColor.imprimirBloque(ContextColor.SUCCESS, "Extracción exitosa, saldo actual: "+saldo);
         }
     }
 
